@@ -44,7 +44,7 @@ def test_environ():
 
 
 def test_atomic_open(tmpdir):
-    test_file = tmpdir.join("test_file.txt")
+    test_file = tmpdir.join(u"test_file.txt")
     replace_with_text = "new test text"
     test_file.write_text("some test text", encoding="utf-8")
     assert read_file(test_file.strpath) == "some test text"
